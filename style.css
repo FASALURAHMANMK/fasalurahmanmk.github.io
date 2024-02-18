@@ -7,11 +7,15 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px 20px;
+  padding: 2px 10px;
   display:flex;
   align-items: center;
+  justify-content: space-between;
 }
-
+#nav_title{
+	margin-right: auto;
+    padding: inherit;
+}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -22,7 +26,9 @@ nav ul li {
   display: inline;
   margin-right: 20px;
 }
-
+.nav-links a:hover {
+    text-decoration: underline;
+}
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -41,4 +47,130 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+}
+footer p {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+ .nav-links.active {
+    display: flex;
+  }
+  .container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+#about_logo {
+  text-align: center;
+  color: #333;
+}
+p {
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+.project {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.project h2 {
+  color: #333;
+}
+
+.project p {
+  color: #666;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+.social-icons a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 5px;
 }
